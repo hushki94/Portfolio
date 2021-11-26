@@ -13,6 +13,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel='shortcut icon' type='image/png' href='./Bitcoin-icon.png'>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_QrpKvS1qDjn1WQte4Ql4x");
+    })();
+    </script>
 
 </head>
 <body>
@@ -211,7 +217,7 @@
                     <div class="box">
                         <img src="./Screenshot_4.png" alt="">
                         <div class="text">E-commerce Website</div>
-                        <a href="https://keen-saha-2adaed.netlify.app/" target="_blank" style="color: white;"><p>Show Demo</p></a>
+                        <a href="https://61a0e6b262b3361257f98096--quirky-kare-fa66fb.netlify.app/" target="_blank" style="color: white;"><p>Show Demo</p></a>
                     </div>
                 </div>
             </div>
@@ -252,23 +258,28 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form>
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" 
+                                placeholder="Name"
+                                id="fromName"  required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email"
+                                id="toName" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" 
+                            placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.."
+                            id="msg" required></textarea>
                         </div>
                         <div class="button-area">
-                            <button type="submit">Send message</button>
+                        <button onclick="sendMail()" type="submit">Send message</button>
                         </div>
                     </form>
                 </div>
